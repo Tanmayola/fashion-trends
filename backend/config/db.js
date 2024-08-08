@@ -6,14 +6,14 @@ const connectDB= async(req,res)=>{
         // res.status(200).send({
         //     message:`Database is connected`;
         // });//data link layer
-        console.log(`database us connect`.bgGreen.white);
+        console.log(`database is connect`.bgGreen.white);
     }catch(error){
         // res.status(504).send({
         //     message:`internal server error ${error}`,
         //     success:false,
         //     description:`db not connected`,
         // });
-        console.log(`Error `);
+        console.log(`Error ${error}`);
     }
 }
 module.exports=connectDB;

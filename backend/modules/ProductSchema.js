@@ -2,48 +2,48 @@ const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema({
     product_id: {
         type: Number,
-        required: True,
-        unique:True
+        required: true,
+        unique:true,
     },
     name: {
        type:String,
-       required:True,
+       required:true,
     },
     description: {
         type:String,
-        require:True,
+        require:true,
     },
     productImg:{
         type:String,
-        required:True,
+        required:true,
     },
     new_price:{
         type:Number,
-        required:True,
+        required:true,
     },
     old_price:{
         type:Number,
-        required:True,
+        required:true,
     },
     product_qty:{
         type:Number,
-        required:True,
+        required:true,
     },
     category:{
         type:String,
-        required:True,
+        required:true,
     },
     sub_category:{
         type:String,
-        required:True,
+        required:true,
     },
     rating:{
         type:Number,
-        required:True,
+        required:true,
     },
     colors:{
         type:String,
-        required:True,
+        required:true,
     }
 });
 const productioncollection = mongoose.model("products",ProductSchema);

@@ -14,13 +14,10 @@ const app = express();
 
 app.use(morgan('dev')); // Optional: Add request logging
 
- app.use("/",rootroute); 
-    //(req, res) => {
-//     res.send("API is live");
-// });
+app.use("/", rootroute);
 
-app.get('/fashiontrends', Productrootroute);
+app.use('/fashiontrends', Productrootroute);
 
 app.listen(PORT, () => {
-    console.log(`Server is live on http://localhost:${PORT}`.bgBlue.white);
+  console.log(`Server is live on http://localhost:${PORT}`.bgBlue.white);
 });
